@@ -1,0 +1,62 @@
+P(n) is a set of nodes n can move
+O is a list of node we are considering
+S is start node
+G is goal node
+
+ORIGINAL BFS
+START
+O <- S
+while O != Empty:
+    n == O.pop
+    if n is G:
+        print the result
+        break
+    O <- P(n)
+print there is no solution
+END
+
+
+DO NOT EXPAND EXPANDED NODES
+START
+O <- S
+while O != Empty:
+    n == O.pop
+    if n is G:
+        print the result
+        break
+    O <- not_in_O_and_never_expanded(P(n))
+print there is no solution
+END
+
+
+CHECK THE RESULT BEFORE ADD TO THE O SET
+START
+if S == G:
+    print the result
+O <- S
+while O != Empty:
+    n == O.pop
+    for ni in P(n):
+        if ni == G:
+            print the result
+        else:
+            O <- ni
+print there is no solution
+END
+
+
+MOST OPTIMIZE
+START
+if S == G:
+    print the result
+O <- S
+while O != Empty:
+    n == O.pop
+    for ni in P(n):
+        if ni == G:
+            print the result
+        else:
+            O <- not_in_O_and_never_expanded(ni)
+print there is no solution
+END
+
