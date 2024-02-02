@@ -32,7 +32,13 @@ class SearchingTreeNode:
         return need_to_search_node.get_cost_to(searching_node.name)
 
 
-
+    def have_on_way(self, searching_node):
+        temp_pointer = self
+        while temp_pointer != None:
+            if temp_pointer.name == searching_node.name:
+                return True
+            temp_pointer = temp_pointer.father_node
+        return False
 
 
 

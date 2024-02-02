@@ -1,20 +1,20 @@
 import Problem
 import BFS
 
-'''
-CTD = 1
-NTLS = 1
-BDLT = 1
-DHNH = 1
-TTTDTTTD = 1
-CDCNTD = 1
-THCSLQD = 1
-DHKT = 1
-WMK = 1
-UTE = 1
-STBH = 1
-NTTD = 1
-'''
+# '''
+# CTD = 1
+# NTLS = 1
+# BDLT = 1
+# DHNH = 1
+# TTTDTTTD = 1
+# CDCNTD = 1
+# THCSLQD = 1
+# DHKT = 1
+# WMK = 1
+# UTE = 1
+# STBH = 1
+# NTTD = 1
+# '''
 
 # TD is Thủ Đức
 around_BDLT = dict(NTLS = 1, DHNH = 1)
