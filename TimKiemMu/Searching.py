@@ -1,8 +1,8 @@
 class SearchingTreeNode:
-    def __init__(self, searching_tree_node_name, come_from_start_fee = 0, father_node = None) -> None:
+    def __init__(self, searching_tree_node_name, come_from_start_cost = 0, father_node = None) -> None:
         self.name = searching_tree_node_name
         self.nearby_nodes = list()
-        self.fee = come_from_start_fee
+        self.cost = come_from_start_cost
         self.father_node = father_node
 
     def add_branch(self, searching_tree_node):
@@ -22,6 +22,16 @@ class SearchingTreeNode:
         if isinstance(other, SearchingTreeNode):
             return self.name == other.name
         return False
+    
+    def cost_to(self, problem_map, searching_node):
+        need_to_search_node = None
+        for program_map_node in problem_map.node_list:
+            if program_map_node.get_name() == searching_node.name:
+                need_to_search_node = program_map_node
+                break
+        return need_to_search_node.get_cost_to(searching_node.name)
+
+
 
 
 

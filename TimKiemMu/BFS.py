@@ -29,7 +29,7 @@ class BFS_Original:
         O = queue.Queue()
         O.put(start_node)
         # create a name list contains all names of current nodes in the O set with the same order
-        expandable_node_names = list(start_node.name)
+        expandable_node_names = list([start_node.name])
         while not O.empty():
             n = O.get()
             print(expandable_node_names.pop(0), "  |  ", end = "")
@@ -78,7 +78,7 @@ class BFS_CheckExpanded:
         O = queue.Queue()
         O.put(start_node)
         expanded_node_names = list()
-        expandable_node_names = list(start_node.name)
+        expandable_node_names = list([start_node.name])
         while not O.empty():
             n = O.get()
             expanded_node_names.append(n.name)
@@ -125,7 +125,7 @@ class BFS_CheckGoalBeforeAdd:
             return start_node_name.create_path()
         O = queue.Queue()
         O.put(start_node)
-        expandable_node_names = list(start_node.name)
+        expandable_node_names = list([start_node.name])
         while not O.empty():
             n = O.get()
             print(expandable_node_names.pop(0), "  |  ", end = "")
@@ -174,7 +174,7 @@ class BFS_Optimize:
         O = queue.Queue()
         O.put(start_node)
         expanded_node_names = list()
-        expandable_node_names = list(start_node.name)
+        expandable_node_names = list([start_node.name])
         while not O.empty():
             n = O.get()
             Pn = self.problem_map.get_nearby_searching_node(n)

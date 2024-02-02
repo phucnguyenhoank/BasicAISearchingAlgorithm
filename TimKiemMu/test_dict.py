@@ -1,4 +1,5 @@
-a = []
+import UCS
+import Searching
 
-print(type(a))
+ucs_set = UCS.UCS_Set()
 

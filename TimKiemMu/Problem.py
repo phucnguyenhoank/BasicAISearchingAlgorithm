@@ -20,7 +20,6 @@ class ProblemMapNode:
         return 0
     
     def get_nearby_node_names(self):
-        nearby_node_names = list()
         nearby_roads = self.node[self.get_name()]
         return list(nearby_roads.keys())
 
@@ -28,7 +27,7 @@ class ProblemMapNode:
 
 
 class ProblemMap:
-    def __init__(self, problem_map_nodes) -> None:
+    def __init__(self, problem_map_nodes):
         self.node_list = problem_map_nodes
 
     def get_nearby_nodes(self, node_name):
@@ -57,11 +56,11 @@ class ProblemMap:
                 break
         nearby_node_names = need_to_search_node.get_nearby_node_names()
 
-        searching_nodes = list()
+        nearby_searching_nodes = list()
         for name in nearby_node_names:
-            searching_nodes.append(Searching.SearchingTreeNode(name))
+            nearby_searching_nodes.append(Searching.SearchingTreeNode(name, need_to_search_node.get_cost_to(name), searching_node))
         
-        return searching_nodes
+        return nearby_searching_nodes
 
 
 
