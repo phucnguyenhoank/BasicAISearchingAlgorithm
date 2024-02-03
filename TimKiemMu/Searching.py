@@ -23,6 +23,12 @@ class SearchingTreeNode:
             return self.name == other.name
         return False
     
+    def __hash__(self) -> int:
+        return hash(self.name)
+    
+    def __str__(self) -> str:
+        return "{{name={}, cost={}}}".format(self.name, self.cost)
+    
     def cost_to(self, problem_map, searching_node):
         need_to_search_node = None
         for program_map_node in problem_map.node_list:
@@ -39,6 +45,15 @@ class SearchingTreeNode:
                 return True
             temp_pointer = temp_pointer.father_node
         return False
+
+    def get_depth(self):
+        count_depth = 0
+        depth_pointer = self
+        while depth_pointer.father_node != None:
+            depth_pointer = depth_pointer.father_node
+            count_depth += 1
+        return count_depth
+
 
 
 
