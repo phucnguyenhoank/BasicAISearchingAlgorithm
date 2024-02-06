@@ -1,4 +1,4 @@
-import Searching
+from base_modules import Searching
 
 class UCS_Original:
     def __init__(self, problem_map) -> None:

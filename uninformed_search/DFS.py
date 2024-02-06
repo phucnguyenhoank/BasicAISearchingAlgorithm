@@ -1,5 +1,4 @@
-
-import Searching
+from base_modules import Searching
 
 class DFS_Original:
     def __init__(self, problem_map) -> None:

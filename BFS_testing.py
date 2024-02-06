@@ -1,5 +1,5 @@
-import Problem
-import BFS
+from base_modules import Problem
+from uninformed_search import BFS
 
 around_s = dict(A = 55, B = 42, C = 48, E = 72)
 around_a = dict(D = 45)

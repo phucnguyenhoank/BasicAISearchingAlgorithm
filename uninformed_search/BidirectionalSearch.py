@@ -1,4 +1,4 @@
-import Searching
+from base_modules import Searching
 import collections
 
 class BiDirectSearch_Original:

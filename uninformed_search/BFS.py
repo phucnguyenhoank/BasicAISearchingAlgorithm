@@ -1,5 +1,4 @@
-
-import Searching
+from base_modules import Searching
 import queue
 
 class BFS_Original:

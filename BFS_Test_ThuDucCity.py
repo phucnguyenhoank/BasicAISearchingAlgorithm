@@ -1,5 +1,5 @@
-import Problem
-import BFS
+from base_modules import Problem
+from uninformed_search import BFS
 
 # '''
 # CTD = 1
@@ -54,11 +54,11 @@ bfs_optimize = BFS.BFS_Optimize(problem_map)
 
 start_node_name = 'BDLT'
 goal_node_name = 'STBH'
-print(bfs_original.print_steps(start_node_name, goal_node_name))
+# print(bfs_original.print_steps(start_node_name, goal_node_name))
 print("----------------------------------------------")
 print(bfs_check_expanded.print_steps(start_node_name, goal_node_name))
 print("----------------------------------------------")
-print(bfs_check_goal_before_add.print_steps(start_node_name, goal_node_name))
+# print(bfs_check_goal_before_add.print_steps(start_node_name, goal_node_name))
 print("----------------------------------------------")
 print(bfs_optimize.print_steps(start_node_name, goal_node_name))
 

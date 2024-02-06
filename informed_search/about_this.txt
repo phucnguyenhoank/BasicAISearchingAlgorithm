@@ -1,0 +1,10 @@
+This type of algorithm use an function named f(n) to evaluate 'the goodness' of nodes are gonna be expanded
+f(n) use the information of the Problem to evaluate,
+depends on each particular algorithm f(n) will have each particular way to evaluate the goodness.
+
+Heuristic function h(n) is a function which evaluates the cost to get to the goal of a node
+h(n) >= 0, h(n) = 0 when n = goal.
+
+
+
+

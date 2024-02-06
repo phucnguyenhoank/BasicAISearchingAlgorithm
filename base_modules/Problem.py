@@ -2,7 +2,11 @@
 # nearby in here is different, 
 # nearby nodes of A are nodes A can go
 
-import Searching
+# from base_modules import Searching
+# import Searching (not work)
+# from .Searching import *
+from . import Searching # from CURRENT import Searching
+
 
 class ProblemMapNode:
     def __init__(self, name, nearby_roads):

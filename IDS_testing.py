@@ -1,5 +1,6 @@
-import Problem
-import DFS
+from base_modules import Problem
+from uninformed_search import IDS
+
 
 around_s = dict(A = 55, B = 42, C = 48, E = 72)
 around_a = dict(D = 45)
@@ -23,12 +24,12 @@ node_G = Problem.ProblemMapNode('G', around_g)
 
 problem_map = Problem.ProblemMap(list((node_S, node_A, node_B, node_C, node_D, node_E, node_F, node_H, node_G)))
 
-dfs_original = DFS.DFS_Original(problem_map)
 
 
+ids_original = IDS.IDS_Original(problem_map)
 start_node_name = 'S'
 goal_node_name = 'G'
 
 
-print(dfs_original.get_final_solution(start_node_name, goal_node_name))
-print(dfs_original.print_steps(start_node_name, goal_node_name))
+print(ids_original.get_final_solution(start_node_name, goal_node_name))
+print(ids_original.print_steps(start_node_name, goal_node_name))
