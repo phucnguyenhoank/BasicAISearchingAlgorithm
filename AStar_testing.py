@@ -1,7 +1,7 @@
 
 
 from base_modules import Problem
-from informed_search import GreedySearch
+from informed_search import AStar
 
 # Image 2.4, page 45
 around_a = dict(D = 45, S = 55)
@@ -30,18 +30,14 @@ node_S = Problem.ProblemMapNode('S', around_s)
 
 problem_map = Problem.ProblemMap(list((node_A, node_B, node_C, node_D, node_E, node_F, node_G, node_H, node_I, node_K, node_S)))
 
+
 start_node_name = 'S'
 goal_node_name = 'G'
 # heuristic function for those start and goal node name
 heuristic_function = dict(A = 123, B = 82, C = 118, D = 115, E = 72, F = 40, G = 0, H = 70, I = 40, K = 30, S = 125)
 
-greedy_search = GreedySearch.GrdSearch(problem_map, heuristic_function)
+a_star = AStar.Ast(problem_map, heuristic_function)
 
+# print(a_star.get_final_solution(start_node_name, goal_node_name))
 
-
-print(greedy_search.get_final_solution(start_node_name, goal_node_name))
-print(greedy_search.print_steps(start_node_name, goal_node_name))
-
-
-
-
+print(a_star.print_steps(start_node_name, goal_node_name))

@@ -37,29 +37,28 @@ class ProblemMap:
     def get_nearby_nodes(self, node_name):
         # looking for the node which we need to search around it
         need_to_search_node = None
-        for program_map_node in self.node_list:
-            if program_map_node.get_name() == node_name:
-                need_to_search_node = program_map_node
+        for problem_map_node in self.node_list:
+            if problem_map_node.get_name() == node_name:
+                need_to_search_node = problem_map_node
                 break
         
         nearby_node_names = need_to_search_node.get_nearby_node_names()
 
         nearby_nodes = list()
-        for program_map_node in self.node_list:
-            if program_map_node.get_name() in nearby_node_names:
-                nearby_nodes.append(program_map_node)
+        for problem_map_node in self.node_list:
+            if problem_map_node.get_name() in nearby_node_names:
+                nearby_nodes.append(problem_map_node)
 
         return nearby_nodes
 
-    # without parent and fee
+    # return a list of searching nodes with their parent and cost from parent to it
     def get_nearby_searching_node(self, searching_node):
         need_to_search_node = None
-        for program_map_node in self.node_list:
-            if program_map_node.get_name() == searching_node.name:
-                need_to_search_node = program_map_node
+        for problem_map_node in self.node_list:
+            if problem_map_node.get_name() == searching_node.name:
+                need_to_search_node = problem_map_node
                 break
         nearby_node_names = need_to_search_node.get_nearby_node_names()
-
         nearby_searching_nodes = list()
         for name in nearby_node_names:
             nearby_searching_nodes.append(Searching.SearchingTreeNode(name, need_to_search_node.get_cost_to(name), searching_node))
