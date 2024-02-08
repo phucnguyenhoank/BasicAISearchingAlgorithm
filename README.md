@@ -17,11 +17,11 @@ Each instance of this class is a dictionary, this dictionary contains ONLY ONE p
 key and value are the name of the node and other name:cost pairs, which are dictionaries too.
 
 Example of structure of a ProblemMapNode and a ProblemMap objects:
-# this is a structure of a ProblemMapNode
+this is a structure of a ProblemMapNode
 nodes_around_S = dict(A = 55, B = 42, C = 48, E = 72)
 ProblemMapNode_S = dict(S = nodes_around_S)
 
-# this is a structure of a ProblemMap
+this is a structure of a ProblemMap
 ProblemMap_A = [nodeS, nodeA, nodeB, nodeC, nodeD, nodeE, nodeF, nodeH, nodeG]
 
 
