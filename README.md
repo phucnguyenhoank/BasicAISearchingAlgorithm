@@ -1,16 +1,11 @@
-Certainly! Here’s the README file with improved readability (without changing the content):
 
----
 
 **Implementation of Searching Algorithms in the book named 'Nhập môn trí tuệ nhân tạo - Từ Minh Phương - Học viện Công nghệ Bưu chính Viễn thông'**
-
----
 
 ### PROJECT STRUCTURE
 
 To test an algorithm, we need to have a **ProblemMap** and a **SearchingSolution**. A **ProblemMap** can use many types of **SearchingSolution**.
 
----
 
 #### ProblemMap
 
@@ -33,8 +28,6 @@ Structure of a **ProblemMap**:
 ProblemMap_A = [nodeS, nodeA, nodeB, nodeC, nodeD, nodeE, nodeF, nodeH, nodeG]
 ```
 
----
-
 Each **SearchingSolution** needs to have a **SearchingTree** and a **SearchingAlgorithm** applied on that **SearchingTree**.
 
 #### SearchingTree
@@ -48,6 +41,4 @@ Has these attributes:
 - Pointers to other **SearchingTreeNode**
 - Fee to arrive from the starting searching tree node
 - Pointer to its father node
-
----
 
